@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<<<<<<< HEAD
+  <title>GEOSPHERE 2026</title>
+=======
+  <title>GEOSPHERE JUAL LUMPIA</title>
+  <title>GEOSPHERE GACOR</title>
+>>>>>>> c131b0f957a8a980acd0ad647bf8c544ccc2980b
+  <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --kuning: #FFD600;
+      --oranye: #FF6B00;
+      --merah: #E8002D;
+      --biru-tua: #0A0E2A;
+      --biru-muda: #1B2AFF;
+      --putih: #FFFFFF;
+      --abu: #F0F0F0;
+      --teks-gelap: #0A0E2A;
+    }
+
+    * {
+      margin: 10;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Nunito', sans-serif;
+      background-color: var(--biru-tua);
+      color: var(--putih);
+      overflow-x: hidden;
+    }
+
+    /* ===== NAVBAR ===== */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 100;
+      background: rgba(10, 14, 42, 0.92);
+      backdrop-filter: blur(10px);
+      border-bottom: 2px solid var(--kuning);
+      padding: 0 5%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+
+    .nav-logo {
+      font-family: 'Black Han Sans', sans-serif;
+      font-size: 1.4rem;
+      color: var(--kuning);
+      letter-spacing: 2px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--putih);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.9rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--kuning);
+    }
+
+    .nav-cta {
+      background: var(--kuning);
+      color: var(--teks-gelap) !important;
+      padding: 8px 20px;
+      border-radius: 4px;
+      font-weight: 800 !important;
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      min-height: 100vh;
+      padding-top: 64px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      background: var(--biru-tua);
+    }
+
+    .hero-bg-shapes {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .hero-bg-shapes .shape1 {
+      position: absolute;
+      top: -100px;
+      right: -100px;
+      width: 600px;
+      height: 600px;
+      background: var(--biru-muda);
+      border-radius: 50%;
+      opacity: 0.12;
+    }
+
+    .hero-bg-shapes .shape2 {
+      position: absolute;
+      bottom: -80px;
+      left: -80px;
+      width: 400px;
+      height: 400px;
+      background: var(--oranye);
+      border-radius: 50%;
+      opacity: 0.12;
+    }
+
+    .hero-bg-shapes .shape3 {
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      width: 200px;
+      height: 200px;
+      background: var(--kuning);
+      transform: rotate(45deg);
+      opacity: 0.06;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 4rem 5%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 4rem;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: var(--oranye);
+      color: var(--putih);
+      font-size: 0.75rem;
+      font-weight: 800;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      padding: 6px 16px;
+      border-radius: 2px;
+      margin-bottom: 1.2rem;
+      animation: fadeInDown 0.6s ease both;
+    }
+
+    .hero-title {
+      font-family: 'Black Han Sans', sans-serif;
+      font-size: clamp(2.8rem, 5vw, 5rem);
+      line-height: 1;
+      letter-spacing: 2px;
+      animation: fadeInDown 0.7s ease 0.1s both;
+    }
+
+    .hero-title .highlight {
+      color: var(--kuning);
+      display: block;
+    }
+
+    .hero-title .merah {
+      color: var(--merah);
+    }
+
+    .hero-desc {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: rgba(255,255,255,0.78);
+      margin: 1.5rem 0 2rem;
+      animation: fadeInDown 0.7s ease 0.2s both;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      animation: fadeInDown 0.7s ease 0.3s both;
+    }
+
+    .btn-primary {
+      background: var(--kuning);
+      color: var(--teks-gelap);
+      font-family: 'Nunito', sans-serif;
+      font-weight: 800;
+      font-size: 1rem;
+      padding: 14px 32px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: transform 0.15s, box-shadow 0.15s;
+      display: inline-block;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(255, 214, 0, 0.35);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--putih);
+      font-family: 'Nunito', sans-serif;
+      font-weight: 800;
+      font-size: 1rem;
+      padding: 14px 32px;
+      border: 2px solid rgba(255,255,255,0.4);
+      border-radius: 4px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: border-color 0.15s, background 0.15s;
+      display: inline-block;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .btn-outline:hover {
+      border-color: var(--kuning);
+      background: rgba(255,214,0,0.08);
+    }
+
+    .hero-visual {
+      animation: fadeInRight 0.8s ease 0.2s both;
+    }
+
+    .countdown-box {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 12px;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .countdown-label {
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--kuning);
+      margin-bottom: 1.5rem;
+    }
+
+    .countdown-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.75rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .countdown-item {
+      background: rgba(255,255,255,0.08);
+      border-radius: 8px;
+      padding: 1rem 0.5rem;
+    }
+
+    .countdown-number {
+      font-family: 'Black Han Sans', sans-serif;
+      font-size: 2.2rem;
+      color: var(--putih);
+      line-height: 1;
+    }
+
+    .countdown-unit {
+      font-size: 0.65rem;
+      color: rgba(255,255,255,0.5);
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-top: 4px;
+    }
+
+    .event-info-strip {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      margin-top: 1.5rem;
+    }
+
+    .info-row {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.75);
+    }
+
+    .info-icon {
+      width: 32px;
+      height: 32px;
+      background: rgba(255,214,0,0.15);
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+
+    /* ===== STATS STRIP ===== */
+    .stats-strip {
+      background: var(--kuning);
+      padding: 1.5rem 5%;
+    }
+
+    .stats-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      text-align: center;
+    }
+
+    .stat-item .stat-num {
+      font-family: 'Black Han Sans', sans-serif;
+      font-size: 2rem;
+      color: var(--teks-gelap);
+    }
+
+    .stat-item .stat-label {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: rgba(10,14,42,0.65);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* ===== KATEGORI ===== */
+    .section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 5rem 5%;
+    }
+
+    .section-tag {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 800;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--oranye);
+      margin-bottom: 0.75rem;
+    }
+
+    .section-title {
+      font-family: 'Black Han Sans', sans-serif;
+      font-size: clamp(1.8rem, 3vw, 2.8rem);
+      line-height: 1.1;
+      margin-bottom: 0.75rem;
+    }
+
+    .section-sub {
+      color: rgba(255,255,255,0.6);
+      font-size: 1rem;
+      max-width: 540px;
+      line-height: 1.7;
+      margin-bottom: 3rem;
+    }
+
+    .kategori-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .kategori-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 12px;
+      padding: 1.75rem;
+      transition: transform 0.2s, border-color 0.2s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .kategori-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+    }
+
+    .kategori-card.k1::before { background: var(--kuning); }
+    .kategori-card.k2::before { background: var(--oranye); }
+    .kategori-card.k3::before { background: var(--merah); }
+    .kategori-card.k4::before { background: var(--biru-muda); }
+
+    .kategori-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(255,255,255,0.2);
+    }
+
+    .card-emoji {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .card-title {
+      font-family: 'Black Han Sans', sans-serif;
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+      letter-spacing: 1px;
+    }
+
+    .card-desc {
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+
+    .card-prize {
+      display: inline-block;
+      background: rgba(255,214,0,0.15);
+      color: var(--kuning);
+      font-size: 0.8rem;
+      font-weight: 800;
+      padding: 4px 12px;
+      border-radius: 4px;
+      letter-spacing: 1px;
+    }
+
+    /* ===== TIMELINE ===== */
+    .timeline-section {
+      background: rgba(255,255,255,0.03);
+      border-top: 1px solid rgba(255,255,255,0.07);
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
+
+    .timeline-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      position: relative;
+    }
+
+    .timeline-list::before {
+      content: '';
+      position: absolute;
+      left: 15px;
+      top: 8px;
+      bottom: 8px;
+      width: 2px;
+      background: rgba(255,255,255,0.1);
+    }
+
+    .tl-item {
+      display: grid;
+      grid-template-columns: 32px 1fr;
+      gap: 1.5rem;
+      align-items: flex-start;
+      padding: 1.25rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .tl-item:last-child {
+      border-bottom: none;
+    }
+
+    .tl-dot {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--biru-tua);
+      border: 2px solid rgba(255,255,255,0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      font-weight: 800;
+      color: rgba(255,255,255,0.5);
+      flex-shrink: 0;
+      z-index: 1;
+      position: relative;
+    }
+
+    .tl-dot.active {
+      background: var(--oranye);
+      border-color: var(--oranye);
+      color: var(--putih);
+    }
+
+    .tl-content .tl-date {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--oranye);
+      margin-bottom: 3px;
+    }
+
+    .tl-content .tl-event {
+      font-weight: 700;
+      font-size: 1rem;
+    }
+
+    .tl-content .tl-detail {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.5);
+      margin-top: 2px;
+    }
+
+    /* ===== HADIAH ===== */
+    .hadiah-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    .hadiah-card {
+      border-radius: 12px;
+      padding: 2rem 1.5rem;
+      text-align: center;
+      position: relative;
+    }
+
+    .hadiah-card.juara1 {
+      background: linear-gradient(135deg, rgba(255,214,0,0.18), rgba(255,107,0,0.12));
+      border: 1px solid rgba(255,214,0,0.3);
+    }
+
+    .hadiah-card.juara2 {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .hadiah-card.juara3 {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .medal {
+      font-size: 3rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .hadiah-rank {
+      font-family: 'Black Han Sans', sans-serif;
+      font-size: 1rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+
+    .hadiah-card.juara1 .hadiah-rank { color: var(--kuning); }
+    .hadiah-card.juara2 .hadiah-rank { color: #B0B8C8; }
+    .hadiah-card.juara3 .hadiah-rank { color: #C87533; }
+
+    .hadiah-nominal {
+      font-family: 'Black Han Sans', sans-serif;
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .hadiah-extras {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.55);
+      line-height: 1.6;
+    }
+
+    /* ===== PENDAFTARAN ===== */
+    .daftar-section {
+      background: var(--oranye);
+    }
+
+    .daftar-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 5rem 5%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .daftar-title {
+      font-family: 'Black Han Sans', sans-serif;
+      font-size: clamp(2rem, 3vw, 3rem);
+      line-height: 1.1;
+      color: var(--putih);
+      margin-bottom: 1rem;
+    }
+
+    .daftar-desc {
+      color: rgba(255,255,255,0.85);
+      line-height: 1.7;
+      margin-bottom: 2rem;
+    }
+
+    .daftar-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    .form-group label {
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.8);
+    }
+
+    .form-group input,
+    .form-group select {
+      background: rgba(255,255,255,0.15);
+      border: 1.5px solid rgba(255,255,255,0.3);
+      border-radius: 6px;
+      padding: 12px 16px;
+      color: var(--putih);
+      font-family: 'Nunito', sans-serif;
+      font-size: 0.95rem;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .form-group input::placeholder { color: rgba(255,255,255,0.45); }
+
+    .form-group input:focus,
+    .form-group select:focus {
+      border-color: var(--kuning);
+    }
+
+    .form-group select option { background: #333; color: #fff; }
+
+    .btn-submit {
+      background: var(--kuning);
+      color: var(--teks-gelap);
+      font-family: 'Nunito', sans-serif;
+      font-weight: 800;
+      font-size: 1rem;
+      padding: 15px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      transition: transform 0.15s;
+    }
+
+    .btn-submit:hover {
+      transform: translateY(-2px);
+    }
+
+    /* ===== FAQ ===== */
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      padding: 1.25rem 0;
+    }
+
+    .faq-q {
+      font-weight: 700;
+      font-size: 1rem;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .faq-q::after {
+      content: '+';
+      font-size: 1.4rem;
+      color: var(--kuning);
+      flex-shrink: 0;
+    }
+
+    .faq-a {
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.7;
+      margin-top: 0.75rem;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: #060912;
+      border-top: 1px solid rgba(255,255,255,0.07);
+      padding: 3rem 5%;
+      text-align: center;
+    }
+
+    .footer-logo {
+      font-family: 'Black Han Sans', sans-serif;
+      font-size: 1.8rem;
+      color: var(--kuning);
+      letter-spacing: 3px;
+      margin-bottom: 1rem;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 2rem;
+      justify-content: center;
+      list-style: none;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: rgba(255,255,255,0.5);
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 600;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover { color: var(--kuning); }
+
+    .footer-copy {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.3);
+    }
+
+    /* ===== ANIMATIONS ===== */
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInRight {
+      from { opacity: 0; transform: translateX(30px); }
+      to   { opacity: 1; transform: translateX(0); }
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 768px) {
+      .hero-content { grid-template-columns: 1fr; gap: 2rem; }
+      .stats-inner { grid-template-columns: repeat(2, 1fr); }
+      .hadiah-grid { grid-template-columns: 1fr; }
+      .daftar-inner { grid-template-columns: 1fr; }
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <div class="nav-logo">KOMPETISI 2025</div>
+    <ul class="nav-links">
+      <li><a href="#kategori">Kategori</a></li>
+      <li><a href="#timeline">Timeline</a></li>
+      <li><a href="#hadiah">Hadiah</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#daftar" class="nav-cta">Daftar Sekarang</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg-shapes">
+      <div class="shape1"></div>
+      <div class="shape2"></div>
+      <div class="shape3"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-text">
+        <span class="hero-badge">🔥 Event Tahunan Terbesar</span>
+        <h1 class="hero-title">
+          KOMPETISI
+          <span class="highlight">NASIONAL</span>
+          <span class="merah">2025</span>
+        </h1>
+        <p class="hero-desc">
+          Tunjukkan kemampuan terbaikmu di ajang kompetisi bergengsi yang mempertemukan talenta-talenta terbaik dari seluruh Indonesia. Jadilah yang terdepan!
+        </p>
+        <div class="hero-buttons">
+          <a href="#daftar" class="btn-primary">Daftar Sekarang</a>
+          <a href="#kategori" class="btn-outline">Lihat Kategori</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="countdown-box">
+          <div class="countdown-label">⏳ Pendaftaran Ditutup Dalam</div>
+          <div class="countdown-grid">
+            <div class="countdown-item">
+              <div class="countdown-number" id="cd-hari">00</div>
+              <div class="countdown-unit">Hari</div>
+            </div>
+            <div class="countdown-item">
+              <div class="countdown-number" id="cd-jam">00</div>
+              <div class="countdown-unit">Jam</div>
+            </div>
+            <div class="countdown-item">
+              <div class="countdown-number" id="cd-menit">00</div>
+              <div class="countdown-unit">Menit</div>
+            </div>
+            <div class="countdown-item">
+              <div class="countdown-number" id="cd-detik">00</div>
+              <div class="countdown-unit">Detik</div>
+            </div>
+          </div>
+          <div class="event-info-strip">
+            <div class="info-row">
+              <div class="info-icon">📅</div>
+              <span><strong>15 Agustus 2025</strong> — Hari Pelaksanaan</span>
+            </div>
+            <div class="info-row">
+              <div class="info-icon">📍</div>
+              <span><strong>Gedung Utama</strong> — Universitas Negeri Jakarta</span>
+            </div>
+            <div class="info-row">
+              <div class="info-icon">👥</div>
+              <span>Terbuka untuk <strong>Mahasiswa Aktif</strong> Se-Indonesia</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS STRIP -->
+  <div class="stats-strip">
+    <div class="stats-inner">
+      <div class="stat-item">
+        <div class="stat-num">500+</div>
+        <div class="stat-label">Peserta Target</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">4</div>
+        <div class="stat-label">Kategori Lomba</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">Rp 50jt</div>
+        <div class="stat-label">Total Hadiah</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">30+</div>
+        <div class="stat-label">Universitas</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- KATEGORI -->
+  <section id="kategori">
+    <div class="section">
+      <span class="section-tag">🏆 Kategori Lomba</span>
+      <h2 class="section-title">Pilih Bidangmu,<br>Tunjukkan Keahlianmu</h2>
+      <p class="section-sub">Empat kategori kompetisi yang dirancang untuk menguji kemampuan akademik dan kreativitas terbaik kamu.</p>
+      <div class="kategori-grid">
+        <div class="kategori-card k1">
+          <div class="card-emoji">💡</div>
+          <div class="card-title">INOVASI SAINS</div>
+          <div class="card-desc">Presentasikan riset atau inovasi ilmiah yang berdampak nyata bagi masyarakat.</div>
+          <span class="card-prize">🥇 Rp 10.000.000</span>
+        </div>
+        <div class="kategori-card k2">
+          <div class="card-emoji">💻</div>
+          <div class="card-title">TEKNOLOGI & IT</div>
+          <div class="card-desc">Bangun solusi digital kreatif dari hackathon, desain UI/UX, hingga pemrograman.</div>
+          <span class="card-prize">🥇 Rp 10.000.000</span>
+        </div>
+        <div class="kategori-card k3">
+          <div class="card-emoji">🎨</div>
+          <div class="card-title">DESAIN KREATIF</div>
+          <div class="card-desc">Ekspresikan visi kreatifmu lewat desain grafis, ilustrasi, dan media visual.</div>
+          <span class="card-prize">🥇 Rp 10.000.000</span>
+        </div>
+        <div class="kategori-card k4">
+          <div class="card-emoji">📊</div>
+          <div class="card-title">BISNIS & EKONOMI</div>
+          <div class="card-desc">Kompetisi business plan dan analisis kasus nyata dunia bisnis masa kini.</div>
+          <span class="card-prize">🥇 Rp 10.000.000</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TIMELINE -->
+  <section id="timeline" class="timeline-section">
+    <div class="section">
+      <span class="section-tag">📅 Jadwal Kegiatan</span>
+      <h2 class="section-title">Timeline Kompetisi</h2>
+      <p class="section-sub">Catat semua tanggal penting agar kamu tidak melewatkan satu pun tahapan kompetisi.</p>
+      <div class="timeline-list">
+        <div class="tl-item">
+          <div class="tl-dot active">1</div>
+          <div class="tl-content">
+            <div class="tl-date">1 – 30 Juni 2025</div>
+            <div class="tl-event">Pendaftaran Peserta</div>
+            <div class="tl-detail">Daftar secara online melalui website ini. Gratis untuk 100 pendaftar pertama!</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot">2</div>
+          <div class="tl-content">
+            <div class="tl-date">1 – 20 Juli 2025</div>
+            <div class="tl-event">Pengumpulan Karya / Proposal</div>
+            <div class="tl-detail">Upload karya atau proposal sesuai kategori yang dipilih.</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot">3</div>
+          <div class="tl-content">
+            <div class="tl-date">25 Juli 2025</div>
+            <div class="tl-event">Pengumuman Finalis</div>
+            <div class="tl-detail">20 finalis terbaik tiap kategori diumumkan melalui website dan email.</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot">4</div>
+          <div class="tl-content">
+            <div class="tl-date">15 Agustus 2025</div>
+            <div class="tl-event">Grand Final & Malam Penghargaan</div>
+            <div class="tl-detail">Presentasi final dan pengumuman pemenang di Gedung Utama UNJ Jakarta.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HADIAH -->
+  <section id="hadiah">
+    <div class="section">
+      <span class="section-tag">🎁 Hadiah & Penghargaan</span>
+      <h2 class="section-title">Raih Hadiahmu</h2>
+      <p class="section-sub">Total hadiah senilai Rp 50 juta menanti para juara terbaik di setiap kategori kompetisi.</p>
+      <div class="hadiah-grid">
+        <div class="hadiah-card juara1">
+          <div class="medal">🥇</div>
+          <div class="hadiah-rank">Juara 1</div>
+          <div class="hadiah-nominal">Rp 10.000.000</div>
+          <div class="hadiah-extras">+ Trofi + Sertifikat + Merchandise Eksklusif</div>
+        </div>
+        <div class="hadiah-card juara2">
+          <div class="medal">🥈</div>
+          <div class="hadiah-rank">Juara 2</div>
+          <div class="hadiah-nominal">Rp 5.000.000</div>
+          <div class="hadiah-extras">+ Trofi + Sertifikat + Merchandise</div>
+        </div>
+        <div class="hadiah-card juara3">
+          <div class="medal">🥉</div>
+          <div class="hadiah-rank">Juara 3</div>
+          <div class="hadiah-nominal">Rp 3.000.000</div>
+          <div class="hadiah-extras">+ Trofi + Sertifikat</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PENDAFTARAN -->
+  <section id="daftar" class="daftar-section">
+    <div class="daftar-inner">
+      <div>
+        <h2 class="daftar-title">Siap Bersaing? Daftar Sekarang!</h2>
+        <p class="daftar-desc">
+          Jangan lewatkan kesempatan emas ini. Isi form pendaftaran dan jadilah bagian dari kompetisi paling bergengsi tahun ini.
+        </p>
+        <ul style="list-style:none; display:flex; flex-direction:column; gap:0.6rem;">
+          <li style="color:rgba(255,255,255,0.85); font-size:0.95rem;">✅ Pendaftaran 100% Gratis</li>
+          <li style="color:rgba(255,255,255,0.85); font-size:0.95rem;">✅ Sertifikat untuk semua peserta</li>
+          <li style="color:rgba(255,255,255,0.85); font-size:0.95rem;">✅ Networking dengan peserta se-Indonesia</li>
+          <li style="color:rgba(255,255,255,0.85); font-size:0.95rem;">✅ Mentoring dari para profesional</li>
+        </ul>
+      </div>
+      <div class="daftar-form">
+        <div class="form-group">
+          <label>Nama Lengkap</label>
+          <input type="text" placeholder="Masukkan nama lengkapmu" />
+        </div>
+        <div class="form-group">
+          <label>Email Aktif</label>
+          <input type="email" placeholder="contoh@email.com" />
+        </div>
+        <div class="form-group">
+          <label>Asal Universitas</label>
+          <input type="text" placeholder="Nama universitas kamu" />
+        </div>
+        <div class="form-group">
+          <label>Kategori Lomba</label>
+          <select>
+            <option value="">-- Pilih Kategori --</option>
+            <option>Inovasi Sains</option>
+            <option>Teknologi & IT</option>
+            <option>Desain Kreatif</option>
+            <option>Bisnis & Ekonomi</option>
+          </select>
+        </div>
+        <button class="btn-submit" onclick="alert('Terima kasih! Pendaftaran berhasil. Cek email kamu untuk konfirmasi.')">
+          Daftar Sekarang →
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="section">
+      <span class="section-tag">❓ FAQ</span>
+      <h2 class="section-title">Pertanyaan Umum</h2>
+      <p class="section-sub">Temukan jawaban atas pertanyaan yang paling sering ditanyakan seputar kompetisi ini.</p>
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-q">Siapa saja yang bisa ikut kompetisi ini?</div>
+          <div class="faq-a">Kompetisi ini terbuka untuk seluruh mahasiswa aktif S1/D3/D4 dari universitas manapun di Indonesia. Tidak ada batasan jurusan atau angkatan.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Apakah bisa daftar sebagai tim?</div>
+          <div class="faq-a">Ya! Kamu bisa daftar secara individu maupun tim. Maksimal 3 orang per tim. Setiap anggota tim wajib mendaftar masing-masing.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Berapa biaya pendaftaran?</div>
+          <div class="faq-a">Pendaftaran sepenuhnya GRATIS untuk semua peserta. Tidak ada biaya apapun yang dikenakan.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Bagaimana format pengumpulan karya?</div>
+          <div class="faq-a">Karya dikumpulkan dalam format PDF/PPT melalui Google Drive yang akan dikirimkan setelah pendaftaran dikonfirmasi. Detail teknis akan dikirim ke email peserta.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Apakah ada akomodasi untuk peserta luar kota?</div>
+          <div class="faq-a">Panitia menyediakan informasi rekomendasi penginapan di sekitar lokasi. Untuk finalis dari luar Jawa, tersedia subsidi transportasi terbatas.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo">GEOSPHERE 2026 JANCOK</div>
+    <ul class="footer-links">
+      <li><a href="#">Beranda</a></li>
+      <li><a href="#kategori">Kategori</a></li>
+      <li><a href="#timeline">Timeline</a></li>
+      <li><a href="#hadiah">Hadiah</a></li>
+      <li><a href="#daftar">Daftar</a></li>
+      <li><a href="#">Hubungi Kami</a></li>
+    </ul>
+    <p class="footer-copy">© 2025 Organisasi Kemahasiswaan. Seluruh hak cipta dilindungi.</p>
+  </footer>
+
+  <script>
+    // Countdown Timer
+    const target = new Date('2025-06-30T23:59:59');
+    function updateCountdown() {
+      const now = new Date();
+      const diff = target - now;
+      if (diff <= 0) {
+        document.getElementById('cd-hari').textContent = '00';
+        document.getElementById('cd-jam').textContent = '00';
+        document.getElementById('cd-menit').textContent = '00';
+        document.getElementById('cd-detik').textContent = '00';
+        return;
+      }
+      const hari = Math.floor(diff / 86400000);
+      const jam = Math.floor((diff % 86400000) / 3600000);
+      const menit = Math.floor((diff % 3600000) / 60000);
+      const detik = Math.floor((diff % 60000) / 1000);
+      document.getElementById('cd-hari').textContent = String(hari).padStart(2, '0');
+      document.getElementById('cd-jam').textContent = String(jam).padStart(2, '0');
+      document.getElementById('cd-menit').textContent = String(menit).padStart(2, '0');
+      document.getElementById('cd-detik').textContent = String(detik).padStart(2, '0');
+    }
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const target = document.querySelector(a.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
